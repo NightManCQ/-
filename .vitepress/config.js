@@ -4,8 +4,8 @@ export default defineConfig({
   title: '对联文明',
   description: '对联文明思想体系文档',
   
-  // 部署到 GitHub Pages 子路径 /blog/
-  base: '/blog/',
+  // 部署到 GitHub Pages 子路径 /-/
+  base: '/-/',
   
   // 多语言配置
   locales: {

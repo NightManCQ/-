@@ -4,17 +4,18 @@
 
 ### 1. 确认仓库设置
 
-确保你的 GitHub 仓库是 `nightmancq/blog`，并且：
+确保你的 GitHub 仓库是 `NightManCQ/-`，并且：
 - ✅ 仓库已创建
 - ✅ 你有推送权限
-- ✅ GitHub Pages 功能已启用
+- ✅ 默认分支是 `master`
+- ✅ GitHub Pages 已启用（从 master 分支）
 
 ### 2. 配置 GitHub Pages
 
 在 GitHub 仓库中：
 1. 进入 **Settings** → **Pages**
-2. 在 **Build and deployment** 部分
-3. **Source** 选择：**GitHub Actions**
+2. **重要**：保持当前设置不变（从 master 分支构建）
+3. GitHub Actions 会自动处理部署，无需更改 Source 设置
 
 ## 🚀 部署步骤
 
@@ -30,11 +31,11 @@ git add .
 git commit -m "init: vitepress blog site"
 
 # 3. 添加远程仓库
-git remote add origin https://github.com/nightmancq/blog.git
+git remote add origin git@github.com:NightManCQ/-.git
 
-# 4. 推送到 main 分支
-git branch -M main
-git push -u origin main
+# 4. 推送到 master 分支
+git branch -M master
+git push -u origin master
 ```
 
 推送后，GitHub Actions 会自动构建和部署。
@@ -55,7 +56,7 @@ git push -u origin main
 
 ### 2. 访问网站
 部署成功后，访问：
-- 🌐 **https://nightmancq.github.io/blog/**
+- 🌐 **https://nightmancq.github.io/-/**
 
 首次部署可能需要 1-3 分钟。
 
@@ -66,12 +67,12 @@ git push -u origin main
 在 `.vitepress/config.js` 中：
 ```javascript
 export default defineConfig({
-  base: '/blog/',  // 部署到子路径
+  base: '/-/',  // 部署到子路径
   // ... 其他配置
 })
 ```
 
-这确保了所有资源链接都正确指向 `/blog/` 子路径。
+这确保了所有资源链接都正确指向 `/-/` 子路径。
 
 ### 目录结构
 
