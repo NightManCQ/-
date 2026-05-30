@@ -4,6 +4,7 @@
   "description": "对联文明思想体系文档站点",
   "type": "module",
   "scripts": {
+    "dev": "vitepress dev",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
